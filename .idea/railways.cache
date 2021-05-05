@@ -2,6 +2,7 @@ do /home/barabas/PROJECT/first_api/bin/bundle exec /usr/share/rvm/rubies/ruby-3.
 Ruby enVironment Manager 1.29.12 (manual) (c) 2009-2020 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
 
                                Prefix Verb   URI Pattern                                                                              Controller#Action
+                          api_v1_user GET    /api/v1/users/:id(.:format)                                                              api/v1/users#show
                          api_v1_login POST   /api/v1/login(.:format)                                                                  api/v1/login#create
         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
            rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
