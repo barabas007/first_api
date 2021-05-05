@@ -7,6 +7,9 @@ module Api
       def show
         render json: User.all
       end
+      def show_user
+        render json: User.find(params[:id])
+      end
     end
   end
 end
