@@ -1,7 +1,7 @@
 module Api
   module V1
     class UsersController < ApplicationController
-      has_secure_password
+
       def index; end
 
       def show
@@ -9,7 +9,7 @@ module Api
       end
 
       def show_user
-        render json: User.find(params[:id])
+        render json: User.limit(5).find(params[:id])
       end
 
       def create
