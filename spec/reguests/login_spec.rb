@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'Login', type: :request do
   describe 'POST/login' do
     it 'login the client' do
-      post '/api/v1/login', params: { name: 'KKK', email: 'ooooooo', password: '12345' }
+      post '/api/v1/login', params: { name: 'KKK', email: 'user@mail.ru', password: '123456' }
 
       # expect(response).to have_http_status(:created)
       # expect(response_body_if_short).to eq({ 'token' => '1234567890' })
