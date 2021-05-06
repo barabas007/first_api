@@ -27,7 +27,7 @@ module Api
         head :no_content
       end
 
-      def update
+      def edit
         if User.update_attributes(user_params)
           render json: user, status: :created
         else
@@ -36,7 +36,7 @@ module Api
       end
 
       def user_params
-        params.require(:user).permit(:name, :email, :password, :password_digest)
+        params.require(:user).permit(:name, :email, :password)
       end
     end
   end
