@@ -27,6 +27,14 @@ module Api
         head :no_content
       end
 
+      def update
+        if User.update_attributes(user_params)
+          render json: user, status: :created
+        else
+          render json: user.errors, status: :unprocessable_entity
+        end
+      end
+
       def user_params
         params.require(:user).permit(:name, :email, :password, :password_digest)
       end
