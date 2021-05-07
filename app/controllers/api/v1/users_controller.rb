@@ -1,7 +1,6 @@
 module Api
   module V1
     class UsersController < ApplicationController
-
       def index; end
 
       def show
@@ -35,9 +34,21 @@ module Api
         end
       end
 
+      def login
+        if User.find_by(email: params[:email])
+          render json: user, status: :ok
+        else
+          render json: user.errors, status: :unprocessable_entity
+        end
+      end
+
       def user_params
         params.require(:user).permit(:name, :email, :password)
       end
+
+
+
+
     end
   end
 end

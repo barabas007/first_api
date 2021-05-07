@@ -7,8 +7,9 @@ module Api
         p params.require(:name).inspect
         p params.require(:password).inspect
         p params.require(:email).inspect
-
       end
+
+
 
       private
 
