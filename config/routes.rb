@@ -5,8 +5,9 @@ def method_user
   delete 'users', to: 'users#destroy'
   get 'users', to: 'users#show_user'
   post 'users', to: 'users#login'
+  get 'users', to: 'users#index'
 
-  resources :users, only: %i[show show_user create edit login]
+  resources :users, only: %i[show show_user create edit login index]
 end
 
 Rails.application.routes.draw do

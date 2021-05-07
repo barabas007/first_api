@@ -16,16 +16,19 @@ module Api
       def create
         user = User.new(user_params)
 
-        if user.save
-          render json: user, status: :ok
+        if user.persisted?
+          render json: user, status: :created
         else
           render json: user.errors, status: :unprocessable_entity
         end
       end
 
       def destroy
-        User.find(params[:id]).destroy!
-        head :no_content
+        if User.find(params[:id]).destroy.destroyed?
+          head :no_content
+        else
+          render json: user.errors, status: :unprocessable_entity
+        end
       end
 
       def edit
@@ -47,10 +50,6 @@ module Api
       def user_params
         params.require(:user).permit(:name, :email, :password)
       end
-
-
-
-
     end
   end
 end
