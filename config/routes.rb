@@ -11,6 +11,6 @@ end
 
 Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
-    namespace :v1, defaults: {format: :json}, &method(:method_user)
+    namespace :v1, defaults: { format: :json }, &method(:method_user)
   end
 end
