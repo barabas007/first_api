@@ -1,7 +1,9 @@
 module Api
   module V1
     class UsersController < ApplicationController
-      def index; end
+      def index
+        render json: User.last(10)
+      end
 
       def show
         render json: User.all
