@@ -6,6 +6,7 @@ def method_user
   get 'users', to: 'users#show_user'
   post 'users', to: 'users#login'
   get 'users', to: 'users#index'
+  put 'users', to: 'user#edit'
 
   resources :users, only: %i[show show_user create edit login index]
 end

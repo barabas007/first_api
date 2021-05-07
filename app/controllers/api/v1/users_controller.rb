@@ -16,7 +16,7 @@ module Api
       def create
         user = User.new(user_params)
 
-        if user.persisted?
+        if user.save.persisted?
           render json: user, status: :created
         else
           render json: user.errors, status: :unprocessable_entity
@@ -40,7 +40,7 @@ module Api
       end
 
       def login
-        if User.find_by(email: params[:email])
+        if User.find_by(email: params[:email], password: params[:password])
           render json: user, status: :ok
         else
           render json: user.errors, status: :unprocessable_entity
