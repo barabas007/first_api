@@ -42,7 +42,7 @@ module Api
       def login
         user = User.find_by(email: params[:user][:email])
         if user & user.authenticate(params[:user][:password])
-          render json: { status: :success }, status: 204
+          render json: { status: :success }, status: :ok
         else
           render json: user.errors, status: 400
         end
