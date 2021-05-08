@@ -12,24 +12,27 @@ module Api
       end
 
       def show_user
-        render json: User.limit(5).find(params[:id])
+        user = User.limit(5).find_by(id: params[:id])
+        return render json: { errors: 'user not found' } unless user
+
+        render json: user
       end
 
       def create
         user = User.new(user_params)
 
-        if user.save.persisted?
+        if user.save
           render json: user, status: :created
         else
-          render json: user.errors, status: :unprocessable_entity
+          render json: user.errors.full_messages, status: :unprocessable_entity
         end
       end
 
       def destroy
-        if User.find(params[:id]).destroy.destroyed?
+        if User.find_by(id: params[:id]).destroy
           head :no_content
         else
-          render json: user.errors, status: :unprocessable_entity
+          render json: user.errors.full_messages, status: :unprocessable_entity
         end
       end
 
@@ -37,16 +40,16 @@ module Api
         if User.update_attributes(user_params)
           render json: user, status: :created
         else
-          render json: user.errors, status: :unprocessable_entity
+          render json: user.errors.full_messages, status: :unprocessable_entity
         end
       end
 
       def login
         user = User.find_by(email: params[:user][:email])
         if user & user.authenticate(params[:user][:password])
-          render json: { status: :success }, status: :ok
+          render json: { success: true }, status: :ok
         else
-          render json: user.errors, status: 400
+          render json: user.errors.full_messages, status: 400
         end
       end
 
