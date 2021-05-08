@@ -1,6 +1,8 @@
 module Api
   module V1
     class UsersController < ApplicationController
+      before_action :authenticate
+
       def index
         render json: User.last(10)
       end
