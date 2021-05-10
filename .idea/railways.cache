@@ -2,15 +2,14 @@ do /home/barabas/PROJECT/first_api/bin/bundle exec /usr/share/rvm/rubies/ruby-3.
 Ruby enVironment Manager 1.29.12 (manual) (c) 2009-2020 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
 
                                Prefix Verb   URI Pattern                                                                              Controller#Action
-                         api_v1_users GET    /api/v1/users(.:format)                                                                  api/v1/users#index
-                                      POST   /api/v1/users(.:format)                                                                  api/v1/users#create
-                     edit_api_v1_user GET    /api/v1/users/:id/edit(.:format)                                                         api/v1/users#edit
-                          api_v1_user GET    /api/v1/users/:id(.:format)                                                              api/v1/users#show
-                                      DELETE /api/v1/users/:id(.:format)                                                              api/v1/users#destroy
-                                      POST   /api/v1/users(.:format)                                                                  api/v1/users#login
-                                      GET    /api/v1/users(.:format)                                                                  api/v1/users#show_user
-                                      PUT    /api/v1/users(.:format)                                                                  api/v1/users#edit
-                                      DELETE /api/v1/users(.:format)                                                                  api/v1/users#destroy
+                         api_v1_users GET    /api/v1/users(.:format)                                                                  api/v1/users#index {:format=>:json}
+                                      POST   /api/v1/users(.:format)                                                                  api/v1/users#create {:format=>:json}
+                          api_v1_user GET    /api/v1/users/:id(.:format)                                                              api/v1/users#show {:format=>:json}
+                                      PATCH  /api/v1/users/:id(.:format)                                                              api/v1/users#update {:format=>:json}
+                                      PUT    /api/v1/users/:id(.:format)                                                              api/v1/users#update {:format=>:json}
+                                      DELETE /api/v1/users/:id(.:format)                                                              api/v1/users#destroy {:format=>:json}
+                   api_v1_users_login POST   /api/v1/users/login(.:format)                                                            api/v1/users#login {:format=>:json}
+                                      DELETE /api/v1/users(.:format)                                                                  api/v1/users#destroy {:format=>:json}
         rails_postmark_inbound_emails POST   /rails/action_mailbox/postmark/inbound_emails(.:format)                                  action_mailbox/ingresses/postmark/inbound_emails#create
            rails_relay_inbound_emails POST   /rails/action_mailbox/relay/inbound_emails(.:format)                                     action_mailbox/ingresses/relay/inbound_emails#create
         rails_sendgrid_inbound_emails POST   /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                  action_mailbox/ingresses/sendgrid/inbound_emails#create
