@@ -30,7 +30,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   gem 'factory_bot'
   gem 'factory_bot_rails'
+  gem 'pry'
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
+
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -42,6 +45,11 @@ group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem 'shoulda-matchers'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
