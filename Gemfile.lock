@@ -57,6 +57,7 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
     bcrypt (3.1.16)
+    blueprinter (0.25.3)
     bootsnap (1.7.4)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -76,7 +77,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    jwt (2.2.3)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -93,6 +93,7 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
+    oj (3.11.5)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -184,12 +185,13 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  blueprinter
   bootsnap (>= 1.4.2)
   byebug
   factory_bot
   factory_bot_rails
-  jwt
   listen (~> 3.2)
+  oj
   pry
   pry-byebug
   puma (~> 4.1)

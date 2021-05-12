@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v6.0.3.6, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.0.3.6, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.16, RVM: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="blueprinter (v0.25.3, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.7.4, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.2.16, RVM: ruby-3.0.0) [gem]" level="application" />
@@ -54,7 +55,6 @@
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.0, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.2, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.8.10, RVM: ruby-3.0.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jwt (v2.2.3, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.5.1, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.9.1, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.7.1, RVM: ruby-3.0.0) [gem]" level="application" />
@@ -65,6 +65,7 @@
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.4.2, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.5.7, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.11.3, RVM: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="oj (v3.11.5, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry (v0.13.1, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pry-byebug (v3.9.0, RVM: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v4.3.7, RVM: ruby-3.0.0) [gem]" level="application" />
