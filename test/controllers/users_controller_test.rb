@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test("should get user") do
+    post '/api/v1/users', params: ( { name: 'Sasha' })
+    assert_response :success
+  end
 end
